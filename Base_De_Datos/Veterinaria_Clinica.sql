@@ -87,7 +87,7 @@ CREATE TABLE factura (
     total DECIMAL(10, 2) NOT NULL,
     estado VARCHAR(20) NOT NULL,
     id_cita INT NOT NULL,
-    FOREIGN KEY (id_cita) REFERENCES cita(id_cita) ON DELETE SET NULL
+    CONSTRAINT fk_factura_cita FOREIGN KEY (id_cita) REFERENCES cita(id_cita) ON DELETE RESTRICT
 );
 
 CREATE TABLE diagnostico (
